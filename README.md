@@ -2,4 +2,4 @@
 3D Space Shooter
 
 ### Sources    
-Star Fox Arwing source: (https://www.models-resource.com/nintendo_64/starfox64/model/26862/)    
+Star Fox Arwing source: [link](https://www.models-resource.com/nintendo_64/starfox64/model/26862/)    
