@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Arwing : MonoBehaviour
 {
+    public GameObject shot;
+    public Transform shotSpawn;
     private float HORIZONTAL_LIMIT = 9.0f;
     private float VERTICAL_LIMIT = 2.0f;
     public float speed;
+    public float fire_rate;
+    private float next_fire;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -23,8 +27,12 @@ public class Arwing : MonoBehaviour
         // Check if boundary is respected:
         Vector3 boundary = transform.position;        
         boundary.x = Mathf.Clamp(boundary.x, -HORIZONTAL_LIMIT, HORIZONTAL_LIMIT);
-        boundary.y = Mathf.Clamp(boundary.y, -VERTICAL_LIMIT, VERTICAL_LIMIT);
+        boundary.y = Mathf.Clamp(boundary.y, -VERTICAL_LIMIT, VERTICAL_LIMIT + 4);
         transform.position = boundary;
-        // transform.position += new Vector3 (Mathf.Clamp(speed * Time.deltaTime, -2.8f, 2.8f), 0.0f, 0.0f);
+
+        if(Input.GetKeyDown("space") && Time.time > next_fire) {
+            next_fire = Time.time + fire_rate;
+            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        }
     }
 }

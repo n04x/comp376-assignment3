@@ -112,6 +112,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &285951961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 285951962}
+  m_Layer: 0
+  m_Name: shotSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &285951962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285951961}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1569768034}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847490463
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,6 +405,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
   m_PrefabInstance: {fileID: 1643286783}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1569768034 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+  m_PrefabInstance: {fileID: 1643286783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1569768035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,7 +422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04009ee247aeeb4ea5f9c87d188c0c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  shot: {fileID: 8747725060736061072, guid: e16250629ca814aa7a0379d519906569, type: 3}
+  shotSpawn: {fileID: 285951962}
+  speed: 5
+  fire_rate: 0.15
 --- !u!1001 &1643286783
 PrefabInstance:
   m_ObjectHideFlags: 0
