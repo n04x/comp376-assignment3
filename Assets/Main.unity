@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 195497926}
   m_Layer: 0
   m_Name: Boundaries
-  m_TagString: Untagged
+  m_TagString: Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 195497923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 200, y: 100, z: 200}
+  m_LocalScale: {x: 300, y: 100, z: 200}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285951962}
   m_Layer: 0
-  m_Name: shotSpawn
+  m_Name: ShotSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 1532097941}
   m_Layer: 0
   m_Name: Game Controller
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -488,8 +488,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TIEFighterObject: {fileID: 4884224403816853737, guid: c75c3c0aa54448459b84f5d59ae4e8d5, type: 3}
   TIEFighterSpawnPosition: {x: 0, y: 1.5, z: 150}
-  StarDestroyerObject: {fileID: 2296346524668313084, guid: 94ddcf94dc2f4779581176aac5043d04, type: 3}
-  StarDestroyerSpawnPosition: {x: 0, y: 9.5, z: 80}
+  StarDestroyerObject: {fileID: 4668006708719007607, guid: 94ddcf94dc2f4779581176aac5043d04, type: 3}
+  StarDestroyerObject2: {fileID: 4056216460422795854, guid: 3b991c16c1ae195e596fea0740fae441, type: 3}
+  StarDestroyerSpawnPosition1: {x: -200, y: 9, z: 80}
+  StarDestroyerSpawnPosition2: {x: 200, y: 9, z: 40}
+  StarDestroyerSpawnPosition3: {x: -200, y: 10, z: 0}
 --- !u!4 &1532097942
 Transform:
   m_ObjectHideFlags: 0

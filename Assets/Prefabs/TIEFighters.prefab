@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8493147887149895217}
   m_Layer: 0
   m_Name: tiefighter (6)
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 5241726599224642734}
   m_Layer: 0
   m_Name: tiefighter (2)
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 5847940761154351159}
   m_Layer: 0
   m_Name: tiefighter (3)
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 4996338721086925063}
   m_Layer: 0
   m_Name: TIEFighters
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -697,7 +697,7 @@ GameObject:
   - component: {fileID: 7092350267600467826}
   m_Layer: 0
   m_Name: tiefighter (4)
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 8544676473812219418}
   m_Layer: 0
   m_Name: tiefighter (5)
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 3212040792530229185}
   m_Layer: 0
   m_Name: tiefighter (1)
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1306,7 +1306,7 @@ GameObject:
   - component: {fileID: 6332901654763001645}
   m_Layer: 0
   m_Name: tiefighter
-  m_TagString: Untagged
+  m_TagString: TIEFighters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
