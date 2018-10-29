@@ -6,9 +6,8 @@ public class Arwing : MonoBehaviour
 {
     public GameObject shot;
     public Transform shotSpawn;
-    private float HORIZONTAL_LIMIT = 9.0f;
-    private float VERTICAL_LIMIT = 2.0f;
-    public float speed;
+    private float HORIZONTAL_LIMIT = 25.0f;
+    private float VERTICAL_LIMIT = 6.0f;
     public float fire_rate;
     private float next_fire;
     Rigidbody rb;
