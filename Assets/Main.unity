@@ -488,8 +488,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TIEFighterObject: {fileID: 4884224403816853737, guid: c75c3c0aa54448459b84f5d59ae4e8d5, type: 3}
   TIEFighterSpawnPosition: {x: 0, y: 1.5, z: 150}
-  StarDestroyerObject: {fileID: 4668006708719007607, guid: 94ddcf94dc2f4779581176aac5043d04, type: 3}
+  StarDestroyerObject1: {fileID: 4668006708719007607, guid: 94ddcf94dc2f4779581176aac5043d04, type: 3}
   StarDestroyerObject2: {fileID: 4056216460422795854, guid: 3b991c16c1ae195e596fea0740fae441, type: 3}
+  StarDestroyerObject3: {fileID: 2769430358268961219, guid: 2b5553ae9dc4b0b048abb32c488fe821, type: 3}
   StarDestroyerSpawnPosition1: {x: -200, y: 9, z: 80}
   StarDestroyerSpawnPosition2: {x: 200, y: 9, z: 40}
   StarDestroyerSpawnPosition3: {x: -200, y: 10, z: 0}
@@ -590,6 +591,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}

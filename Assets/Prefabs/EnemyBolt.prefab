@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 7946858822152434115}
   m_Layer: 0
   m_Name: EnemyBolt
-  m_TagString: Bolt
+  m_TagString: EnemyBolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

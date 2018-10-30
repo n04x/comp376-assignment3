@@ -13,9 +13,9 @@ public class DestroyByContact : MonoBehaviour
         }
     }
     void OnTriggerEnter(Collider other) {
-        if(other.tag == "Boundary") {
+        if(other.tag == "Boundary" || other.tag == "EnemyBolt") {
             return;
-        }        
+        }
         Destroy(other.gameObject);
         Destroy(gameObject);
         if(other.tag == "Bolt" && gameObject.tag == "TIEFighters") {

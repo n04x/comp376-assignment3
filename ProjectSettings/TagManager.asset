@@ -8,6 +8,7 @@ TagManager:
   - TIEFighters
   - StarDestroyer
   - Boundary
+  - EnemyBolt
   layers:
   - Default
   - TransparentFX

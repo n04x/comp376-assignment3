@@ -9,14 +9,14 @@ public class GameController : MonoBehaviour
     public Vector3 TIEFighterSpawnPosition;
 
     // Information for Star Destroyer.
-    public GameObject StarDestroyerObject;
+    public GameObject StarDestroyerObject1;
     public GameObject StarDestroyerObject2;
+    public GameObject StarDestroyerObject3;
     public Vector3 StarDestroyerSpawnPosition1;
     public Vector3 StarDestroyerSpawnPosition2;
     public Vector3 StarDestroyerSpawnPosition3;
 
     // Time to wait before spawning
-    float startWait = 1.0f;
     private int tie_destroyed_counter;
     private int star_destroyer_counter;
     private bool callStarDestroyer = false;
@@ -42,12 +42,11 @@ public class GameController : MonoBehaviour
         } else if(callStarDestroyer && star_destroyer_counter == 2) {
             Invoke("SpawnStarDestroyer2", 8);
             star_destroyer_counter++;
-        } 
-        // else if(callStarDestroyer && star_destroyer_counter == 3) {
-            // Invoke("SpawnStarDestroyer3", 8);
-            // star_destroyer_counter++;
-            // callStarDestroyer = false;
-        // }
+        } else if(callStarDestroyer && star_destroyer_counter == 3) {
+            Invoke("SpawnStarDestroyer3", 16);
+            star_destroyer_counter++;
+            callStarDestroyer = false;
+        }
     }
     void SpawnTIEFighter() {
         Quaternion spawnRotation = Quaternion.identity;
@@ -56,7 +55,7 @@ public class GameController : MonoBehaviour
 
     void SpawnStarDestroyer1() {
         Quaternion spawnRotation = Quaternion.identity;
-        Instantiate(StarDestroyerObject, StarDestroyerSpawnPosition1, spawnRotation); 
+        Instantiate(StarDestroyerObject1, StarDestroyerSpawnPosition1, spawnRotation); 
     }
     void SpawnStarDestroyer2() {
         Quaternion spawnRotation = Quaternion.identity;
@@ -65,7 +64,7 @@ public class GameController : MonoBehaviour
 
     void SpawnStarDestroyer3() {
         Quaternion spawnRotation = Quaternion.identity;
-        Instantiate(StarDestroyerObject, StarDestroyerSpawnPosition3, spawnRotation); 
+        Instantiate(StarDestroyerObject3, StarDestroyerSpawnPosition3, spawnRotation); 
     }
     public void TIEFighterDestroyed() {
         tie_destroyed_counter++;
