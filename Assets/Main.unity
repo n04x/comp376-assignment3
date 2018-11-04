@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 1014369884}
   - component: {fileID: 1014369883}
   - component: {fileID: 1014369882}
+  - component: {fileID: 1014369885}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -472,6 +473,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014369885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014369881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4cc399c8150df6efa7e753d3b850b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 1014369884}
+  shakeTimer: 0
+  shakeAmount: 0.7
+  decreaseFactor: 1
 --- !u!1 &1157428728
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +800,7 @@ MonoBehaviour:
   StarDestroyerSpawnPosition1: {x: -200, y: 9, z: 80}
   StarDestroyerSpawnPosition2: {x: 200, y: 9, z: 40}
   StarDestroyerSpawnPosition3: {x: -200, y: 10, z: 0}
-  DeathStartSpawnPosition: {x: 0, y: 14, z: -30}
+  DeathStartSpawnPosition: {x: 0, y: 14, z: 0}
   ScoreBoard: {fileID: 2118428427}
 --- !u!4 &1532097942
 Transform:
@@ -824,6 +841,22 @@ MonoBehaviour:
   shot: {fileID: 8747725060736061072, guid: e16250629ca814aa7a0379d519906569, type: 3}
   shotSpawn: {fileID: 285951962}
   fire_rate: 0.15
+--- !u!54 &1569768036
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569768033}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!1001 &1643286783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -886,6 +919,58 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400006, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400006, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400008, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400010, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400012, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400014, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400016, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400018, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400020, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400022, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400002, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400004, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 360da01846d6eff8aa2a6a9048e0e545, type: 3}

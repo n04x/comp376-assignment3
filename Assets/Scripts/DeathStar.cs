@@ -37,20 +37,21 @@ public class DeathStar : MonoBehaviour
             invincible = false;
         }
         Shield();
-       
+        if(!invincible && Time.time > nextFire) {
+            nextFire = Time.time + fireRate;
+            Shoot();
+        }
     }
     void Shield() {
-         if(!invincible && Time.time > nextFire) {
             if(shieldLevel == 2) {
                 deathStarSpriteRenderer.color = Color.blue;
             } else if(shieldLevel == 1) {
                 deathStarSpriteRenderer.color = Color.red;
             } else {
                 deathStarSpriteRenderer.color = Color.white;
+                shieldBroken = true;
             } 
-            nextFire = Time.time + fireRate;
-            Shoot();
-        }
+        
         if(shieldBroken) {
             shieldTimer += Time.deltaTime;
         }
@@ -67,14 +68,10 @@ public class DeathStar : MonoBehaviour
         }
         if(invincible) {
             return;
+        } else if(shieldBroken) {
+            DeathStarHP.DamageTaken(1);
         } else {
             shieldLevel--;
-            if(shieldLevel == 0) {
-                shieldBroken = true;
-                DeathStarHP.DamageTaken(1);
-            } else if(shieldLevel == 1) {
-                deathStarSpriteRenderer.color = Color.red;
-            }
             // this.GetComponent<SpriteRenderer>().sprite = DamagedDeathStar;
         }
     }

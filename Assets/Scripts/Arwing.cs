@@ -6,6 +6,7 @@ public class Arwing : MonoBehaviour
 {
     public GameObject shot;
     public Transform shotSpawn;
+    private CameraShake camShake;
     private float HORIZONTAL_LIMIT = 25.0f;
     private float VERTICAL_LIMIT = 6.0f;
     public float fire_rate;
@@ -14,6 +15,10 @@ public class Arwing : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject camShakeObject = GameObject.FindWithTag("MainCamera");
+        if(camShakeObject != null) {
+            camShake = camShakeObject.GetComponent<CameraShake>();
+        }
     }
 
     // Update is called once per frame
@@ -32,6 +37,13 @@ public class Arwing : MonoBehaviour
         if(Input.GetKeyDown("space") && Time.time > next_fire) {
             next_fire = Time.time + fire_rate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+        }
+    }
+    private void OnTriggerEnter(Collider other) {
+        if(other.tag == "Bolt" || other.tag == "Boundary") {
+            return;
+        } else {
+            camShake.FoxIsHit();
         }
     }
 }

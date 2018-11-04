@@ -10,6 +10,7 @@ TagManager:
   - Boundary
   - EnemyBolt
   - DeathStarHP
+  - DeathStar
   layers:
   - Default
   - TransparentFX
