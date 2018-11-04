@@ -8,7 +8,7 @@ public class Arwing : MonoBehaviour
     public Transform shotSpawn;
     private CameraShake camShake;
     private float HORIZONTAL_LIMIT = 25.0f;
-    private float VERTICAL_LIMIT = 6.0f;
+    private float VERTICAL_LIMIT = 7.5f;
     public float fire_rate;
     private float next_fire;
     Rigidbody rb;
@@ -31,9 +31,11 @@ public class Arwing : MonoBehaviour
         // Check if boundary is respected:
         Vector3 boundary = transform.position;        
         boundary.x = Mathf.Clamp(boundary.x, -HORIZONTAL_LIMIT, HORIZONTAL_LIMIT);
-        boundary.y = Mathf.Clamp(boundary.y, -VERTICAL_LIMIT, VERTICAL_LIMIT + 4);
+        boundary.y = Mathf.Clamp(boundary.y, -VERTICAL_LIMIT, VERTICAL_LIMIT + 2);
         transform.position = boundary;
-
+        if(transform.position.y <= -7) {
+            camShake.FoxIsHit();
+        }
         if(Input.GetKeyDown("space") && Time.time > next_fire) {
             next_fire = Time.time + fire_rate;
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);

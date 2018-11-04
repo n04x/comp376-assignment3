@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TIEFighterMovement : MonoBehaviour
 {
+    
     float TIE_FIGHTER_STATIC_POSITION = 0.0f;
     public float speed;
     float movement;

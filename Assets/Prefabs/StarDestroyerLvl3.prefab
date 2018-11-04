@@ -129,6 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosion: {fileID: 3742369439102127867, guid: b30c809497fe300f0998d66bdc0c4653, type: 3}
+  SmokeHit: {fileID: 4598306611387698098, guid: 7cb4c0e7f04cda2ef9269d656c67c38f, type: 3}
   scoreValue: 200
 --- !u!65 &2211707655601525676
 BoxCollider:

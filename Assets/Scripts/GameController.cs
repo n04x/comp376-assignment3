@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     private int star_destroyer_counter;
     private bool callStarDestroyer = false;
     private bool callDeathStar = true;
+    private bool callTIEFighter = true;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +49,11 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(tie_destroyed_counter > 6) {
+        if(tie_destroyed_counter > 7 && callTIEFighter) {
+            Invoke("SpawnTIEFighter", 2);
+            callTIEFighter = false;
+        }
+        if(tie_destroyed_counter > 14) {
             callStarDestroyer = true;
         }
         if(callStarDestroyer && star_destroyer_counter == 1) {

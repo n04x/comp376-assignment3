@@ -11,6 +11,7 @@ TagManager:
   - EnemyBolt
   - DeathStarHP
   - DeathStar
+  - Floor
   layers:
   - Default
   - TransparentFX
