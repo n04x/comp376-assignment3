@@ -7,6 +7,7 @@ public class StarDestroyerMovement : MonoBehaviour
     // Going to Right direction if true.
     // GOing to Left direction if false.
     public bool going_right;
+    public Sprite StarDestroyerFire;
     public bool stopping;
     public bool shoot;
     private bool moving;
@@ -15,6 +16,7 @@ public class StarDestroyerMovement : MonoBehaviour
     public float speed;
     public GameObject EnemyBolt;
     public Transform ShotSpawn;
+    public Transform ShotSpawn2;
 
     void Start() {
         moving = true;
@@ -39,8 +41,7 @@ public class StarDestroyerMovement : MonoBehaviour
     }
 
     void CheckPosition() {
-        if(transform.position.x >= -15) {
-            Debug.Log(transform.position.x);
+        if(transform.position.x >= -1) {
             moving = false;
         }
     }
@@ -55,6 +56,8 @@ public class StarDestroyerMovement : MonoBehaviour
         moving = false;
     }
     void Shoot() {
+        // this.GetComponent<SpriteRenderer>().sprite = StarDestroyerFire;
         Instantiate(EnemyBolt, ShotSpawn.position, ShotSpawn.rotation);
+        Instantiate(EnemyBolt, ShotSpawn2.position, ShotSpawn2.rotation);
     }
 }

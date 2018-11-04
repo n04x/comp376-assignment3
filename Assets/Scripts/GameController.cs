@@ -12,14 +12,17 @@ public class GameController : MonoBehaviour
     public GameObject StarDestroyerObject1;
     public GameObject StarDestroyerObject2;
     public GameObject StarDestroyerObject3;
+    public GameObject DeathStarObject;
     public Vector3 StarDestroyerSpawnPosition1;
     public Vector3 StarDestroyerSpawnPosition2;
     public Vector3 StarDestroyerSpawnPosition3;
+    public Vector3 DeathStartSpawnPosition;
 
     // Time to wait before spawning
     private int tie_destroyed_counter;
     private int star_destroyer_counter;
     private bool callStarDestroyer = false;
+    private bool callDeathStar = true;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +50,10 @@ public class GameController : MonoBehaviour
             star_destroyer_counter++;
             callStarDestroyer = false;
         }
+        if(star_destroyer_counter >= 3 && callDeathStar) {
+            callDeathStar = false;
+            Invoke("SpawnDeathStar", 25);
+        }
     }
     void SpawnTIEFighter() {
         Quaternion spawnRotation = Quaternion.identity;
@@ -66,7 +73,14 @@ public class GameController : MonoBehaviour
         Quaternion spawnRotation = Quaternion.identity;
         Instantiate(StarDestroyerObject3, StarDestroyerSpawnPosition3, spawnRotation); 
     }
+
+    void SpawnDeathStar() {
+        Quaternion spawnRotation = Quaternion.identity;
+        Instantiate(DeathStarObject, DeathStartSpawnPosition, spawnRotation);
+    }
     public void TIEFighterDestroyed() {
         tie_destroyed_counter++;
     }
+
+
 }
