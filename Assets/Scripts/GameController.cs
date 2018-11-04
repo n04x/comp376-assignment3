@@ -24,16 +24,22 @@ public class GameController : MonoBehaviour
 
     // Text management for the game.
     public Text ScoreBoard;
+    public Text GameOverText;
     private int score;
     private int tie_destroyed_counter;
     private int star_destroyer_counter;
     private bool callStarDestroyer = false;
     private bool callDeathStar = true;
     private bool callTIEFighter = true;
+    private bool gameOver;
+    private bool restart;
 
     // Start is called before the first frame update
     void Start()
     {
+        restart = false;
+        gameOver = false;
+        GameOverText.text = "";
         GameObject deathStarHPObject = GameObject.FindWithTag("DeathStarHP");
         if(deathStarHPObject != null) {
             DeathStarHP = deathStarHPObject.GetComponent<DeathStarHPController>();
@@ -49,6 +55,11 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(restart) {
+            if(Input.GetKeyDown(KeyCode.R)) {
+                SceneManager.LoadScene(0);
+            }
+        }
         if(tie_destroyed_counter > 7 && callTIEFighter) {
             Invoke("SpawnTIEFighter", 2);
             callTIEFighter = false;
@@ -69,8 +80,11 @@ public class GameController : MonoBehaviour
         }
         if(star_destroyer_counter >= 3 && callDeathStar) {
             callDeathStar = false;
-            Invoke("SpawnDeathStar", 25);
-            
+            Invoke("SpawnDeathStar", 25);   
+        }
+        if(gameOver) {
+            GameOverText.text = "press 'r' for restart";
+            restart = true;
         }
     }
     void SpawnTIEFighter() {
@@ -107,6 +121,11 @@ public class GameController : MonoBehaviour
     }
     void UpdateScore() {
         ScoreBoard.text = "score: " + score;
+    }
+
+    public void GameOver() {
+        GameOverText.text = "game over!";
+        gameOver = true;
     }
 
 }

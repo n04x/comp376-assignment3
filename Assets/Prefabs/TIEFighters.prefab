@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 369267497145425297}
   - component: {fileID: 369267497145425296}
+  - component: {fileID: 4946371874579065986}
   - component: {fileID: 7308118311629549509}
   - component: {fileID: 369267497145425298}
   - component: {fileID: 1239996651924609056}
@@ -84,6 +85,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4946371874579065986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369267497145425310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7581cea67b3a87cb1c3519a7fea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 3
+  shot: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
+  shotSpawn: {fileID: 7344256198142556695}
 --- !u!114 &7308118311629549509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +270,7 @@ GameObject:
   - component: {fileID: 369267497155060178}
   - component: {fileID: 369267497155060183}
   - component: {fileID: 1524719851055561087}
+  - component: {fileID: 3400241789027976264}
   - component: {fileID: 369267497155060181}
   - component: {fileID: 7657475029131991244}
   - component: {fileID: 1521880291797347892}
@@ -341,6 +358,21 @@ MonoBehaviour:
   explosion: {fileID: 3742369439102127867, guid: b30c809497fe300f0998d66bdc0c4653, type: 3}
   SmokeHit: {fileID: 4598306611387698098, guid: 7cb4c0e7f04cda2ef9269d656c67c38f, type: 3}
   scoreValue: 100
+--- !u!114 &3400241789027976264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369267497155060179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7581cea67b3a87cb1c3519a7fea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 5
+  shot: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
+  shotSpawn: {fileID: 7344256198142556695}
 --- !u!82 &369267497155060181
 AudioSource:
   m_ObjectHideFlags: 0
@@ -480,6 +512,7 @@ GameObject:
   - component: {fileID: 369267497717114362}
   - component: {fileID: 2646621379096148095}
   - component: {fileID: 1201029458034548515}
+  - component: {fileID: 3489910190343143717}
   m_Layer: 0
   m_Name: tiefighter (4)
   m_TagString: TIEFighters
@@ -689,6 +722,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3489910190343143717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369267497717114360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7581cea67b3a87cb1c3519a7fea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 3
+  shot: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
+  shotSpawn: {fileID: 7344256198142556695}
 --- !u!1 &369267497777693518
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +751,7 @@ GameObject:
   - component: {fileID: 369267497777693504}
   - component: {fileID: 3477745494035593495}
   - component: {fileID: 4020207796076701825}
+  - component: {fileID: 2677821756332842062}
   m_Layer: 0
   m_Name: tiefighter (5)
   m_TagString: TIEFighters
@@ -912,6 +961,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2677821756332842062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369267497777693518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7581cea67b3a87cb1c3519a7fea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 5
+  shot: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
+  shotSpawn: {fileID: 7344256198142556695}
 --- !u!1 &369267498131271956
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,6 +990,7 @@ GameObject:
   - component: {fileID: 1503179877383161180}
   - component: {fileID: 1038638760297907107}
   - component: {fileID: 2421025285005899997}
+  - component: {fileID: 2890306240308710854}
   m_Layer: 0
   m_Name: tiefighter (2)
   m_TagString: TIEFighters
@@ -1135,6 +1200,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2890306240308710854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369267498131271956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7581cea67b3a87cb1c3519a7fea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 4
+  shot: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
+  shotSpawn: {fileID: 7344256198142556695}
 --- !u!1 &369267498203861210
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1229,7 @@ GameObject:
   - component: {fileID: 369267498203861212}
   - component: {fileID: 1729287430896615226}
   - component: {fileID: 3703814719453256237}
+  - component: {fileID: 2494381086910974530}
   m_Layer: 0
   m_Name: tiefighter (3)
   m_TagString: TIEFighters
@@ -1358,6 +1439,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2494381086910974530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369267498203861210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7581cea67b3a87cb1c3519a7fea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 4
+  shot: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
+  shotSpawn: {fileID: 7344256198142556695}
 --- !u!1 &369267498342563812
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,6 +1489,7 @@ Transform:
   - {fileID: 369267497717114363}
   - {fileID: 369267497777693505}
   - {fileID: 369267498637565948}
+  - {fileID: 7344256198142556695}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1423,6 +1520,7 @@ GameObject:
   - component: {fileID: 369267498637565951}
   - component: {fileID: 3677787109133893948}
   - component: {fileID: 7207375698477062753}
+  - component: {fileID: 6563285497681312076}
   m_Layer: 0
   m_Name: tiefighter (6)
   m_TagString: TIEFighters
@@ -1632,3 +1730,48 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6563285497681312076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369267498637565949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7581cea67b3a87cb1c3519a7fea729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time_between_attack: 5
+  shot: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
+  shotSpawn: {fileID: 7344256198142556695}
+--- !u!1 &3545328992760862041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7344256198142556695}
+  m_Layer: 0
+  m_Name: Shot Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7344256198142556695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545328992760862041}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 369267498342563814}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
