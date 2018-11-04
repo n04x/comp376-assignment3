@@ -38,14 +38,12 @@ public class DeathStar : MonoBehaviour
     void Shield() {
          if(!invincible && Time.time > nextFire) {
             if(shieldLevel == 2) {
-                Debug.Log(shieldLevel);
                 deathStarSpriteRenderer.color = Color.blue;
             } else if(shieldLevel == 1) {
                 deathStarSpriteRenderer.color = Color.red;
             } else {
                 deathStarSpriteRenderer.color = Color.white;
             } 
-            
             nextFire = Time.time + fireRate;
             Shoot();
         }
