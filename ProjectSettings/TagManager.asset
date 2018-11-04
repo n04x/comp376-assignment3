@@ -12,6 +12,8 @@ TagManager:
   - DeathStarHP
   - DeathStar
   - Floor
+  - Upgrade
+  - Arwing
   layers:
   - Default
   - TransparentFX

@@ -11,7 +11,7 @@ public class TIEFighterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement += Time.deltaTime;
+        // movement += Time.deltaTime;
         if(gameObject.transform.position.z > TIE_FIGHTER_STATIC_POSITION) {
             transform.Translate(-Vector3.forward * speed);
         }
