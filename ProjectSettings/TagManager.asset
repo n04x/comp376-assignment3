@@ -9,6 +9,7 @@ TagManager:
   - StarDestroyer
   - Boundary
   - EnemyBolt
+  - DeathStarHP
   layers:
   - Default
   - TransparentFX

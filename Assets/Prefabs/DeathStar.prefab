@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3625789006876646247
+--- !u!1 &1792929289665216889
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3625789006876646246}
+  - component: {fileID: 1792929289665216888}
   m_Layer: 0
   m_Name: Shot Spawn
   m_TagString: Untagged
@@ -16,21 +16,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3625789006876646246
+--- !u!4 &1792929289665216888
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3625789006876646247}
+  m_GameObject: {fileID: 1792929289665216889}
   m_LocalRotation: {x: -0.027921675, y: 0, z: 0, w: 0.9996101}
   m_LocalPosition: {x: 0, y: -13, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3625789008033740910}
+  m_Father: {fileID: 1792929290822115952}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -3.2, y: 0, z: 0}
---- !u!1 &3625789006919007301
+--- !u!1 &1792929289690801755
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,10 +38,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3625789006919007300}
-  - component: {fileID: 3625789006919007303}
-  - component: {fileID: 3625789006919007297}
-  - component: {fileID: 3625789006919007302}
+  - component: {fileID: 1792929289690801754}
+  - component: {fileID: 1792929289690801753}
+  - component: {fileID: 1792929289690801759}
+  - component: {fileID: 1792929289690801752}
   m_Layer: 0
   m_Name: deathstar
   m_TagString: Untagged
@@ -49,27 +49,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3625789006919007300
+--- !u!4 &1792929289690801754
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3625789006919007301}
+  m_GameObject: {fileID: 1792929289690801755}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 15, y: 15, z: 0}
   m_Children: []
-  m_Father: {fileID: 3625789008033740910}
+  m_Father: {fileID: 1792929290822115952}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3625789006919007303
+--- !u!212 &1792929289690801753
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3625789006919007301}
+  m_GameObject: {fileID: 1792929289690801755}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -111,35 +111,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3625789006919007297
+--- !u!114 &1792929289690801759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3625789006919007301}
+  m_GameObject: {fileID: 1792929289690801755}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 308bf96debe648f2eb3751fba75ffda5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DamagedDeathStar: {fileID: 21300000, guid: 27e437d7c467e44989ff3242ee24b8fb, type: 3}
+  HP: {fileID: 0}
   EnemyBolt: {fileID: 7948551646229962258, guid: 55ec62068c79a87d09a239e95f30631c, type: 3}
-  ShotSpawn: {fileID: 3625789006876646246}
---- !u!135 &3625789006919007302
+  ShotSpawn: {fileID: 1792929289665216888}
+--- !u!135 &1792929289690801752
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3625789006919007301}
+  m_GameObject: {fileID: 1792929289690801755}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.3
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &3625789008033740908
+--- !u!1 &1792929290822115954
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +148,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3625789008033740910}
+  - component: {fileID: 1792929290822115952}
   m_Layer: 0
   m_Name: DeathStar
   m_TagString: Untagged
@@ -155,19 +156,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3625789008033740910
+--- !u!4 &1792929290822115952
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3625789008033740908}
+  m_GameObject: {fileID: 1792929290822115954}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3625789006919007300}
-  - {fileID: 3625789006876646246}
+  - {fileID: 1792929289690801754}
+  - {fileID: 1792929289665216888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

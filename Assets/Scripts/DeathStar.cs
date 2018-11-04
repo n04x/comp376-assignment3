@@ -6,6 +6,7 @@ public class DeathStar : MonoBehaviour
 {
     // When the death star will be damaged.
     public Sprite DamagedDeathStar;
+    private DeathStarHPController DeathStarHP;
     private float DEATHSTAR_MOVEMENT = 10.0f;
     private float fireRate;
     private float nextFire;
@@ -19,10 +20,13 @@ public class DeathStar : MonoBehaviour
     public GameObject EnemyBolt;
     public Transform ShotSpawn;
     void Start() {
+        GameObject deathStarHPObject = GameObject.FindWithTag("DeathStarHP");
+        if(deathStarHPObject != null) {
+            DeathStarHP = deathStarHPObject.GetComponent<DeathStarHPController>();
+        } 
+        deathStarSpriteRenderer = GetComponent<SpriteRenderer>();  
         shieldLevel = 2;
         fireRate = 2.5f;
-        deathStarSpriteRenderer = GetComponent<SpriteRenderer>();
-        
     }
 
     void Update() {
@@ -67,6 +71,7 @@ public class DeathStar : MonoBehaviour
             shieldLevel--;
             if(shieldLevel == 0) {
                 shieldBroken = true;
+                DeathStarHP.DamageTaken(1);
             } else if(shieldLevel == 1) {
                 deathStarSpriteRenderer.color = Color.red;
             }
@@ -75,6 +80,5 @@ public class DeathStar : MonoBehaviour
     }
     void Shoot() {
         Instantiate(EnemyBolt, ShotSpawn.position, ShotSpawn.rotation);
-    }
-    
+    }   
 }

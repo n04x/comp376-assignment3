@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!82 &4884224403038114034
 AudioSource:
   m_ObjectHideFlags: 0
@@ -393,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!135 &5241726599224642734
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -500,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!82 &4884224403678420945
 AudioSource:
   m_ObjectHideFlags: 0
@@ -776,6 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!82 &4884224404298705655
 AudioSource:
   m_ObjectHideFlags: 0
@@ -979,6 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!82 &4884224404359285837
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1182,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!82 &4884224404776840920
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1385,6 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 100
 --- !u!82 &4884224404800754335
 AudioSource:
   m_ObjectHideFlags: 0

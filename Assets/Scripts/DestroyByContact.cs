@@ -5,6 +5,7 @@ using UnityEngine;
 public class DestroyByContact : MonoBehaviour
 {
     private GameController gameController;
+    public int scoreValue;
 
     private void Start() {
         GameObject gameControllerObject = GameObject.FindWithTag("GameController");
@@ -16,10 +17,11 @@ public class DestroyByContact : MonoBehaviour
         if(other.tag == "Boundary" || other.tag == "EnemyBolt") {
             return;
         }
-        Destroy(other.gameObject);
-        Destroy(gameObject);
         if(other.tag == "Bolt" && gameObject.tag == "TIEFighters") {
             gameController.TIEFighterDestroyed();
         }
+        Destroy(other.gameObject);
+        Destroy(gameObject);
+        gameController.AddScore(scoreValue);
     }
 }

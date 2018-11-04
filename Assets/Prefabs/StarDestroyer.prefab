@@ -127,10 +127,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   going_right: 1
+  StarDestroyerFire: {fileID: 0}
+  stopping: 0
   shoot: 0
   speed: 1.5
   EnemyBolt: {fileID: 0}
   ShotSpawn: {fileID: 0}
+  ShotSpawn2: {fileID: 0}
 --- !u!114 &8307602158620768433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e633cfe9524d694dbb37bf570e8fd530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreValue: 500
 --- !u!65 &4439143196762088708
 BoxCollider:
   m_ObjectHideFlags: 0
