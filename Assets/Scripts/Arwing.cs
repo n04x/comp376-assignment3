@@ -91,6 +91,7 @@ public class Arwing : MonoBehaviour
             return;
         } 
         else {
+            DamageTaken();
             camShake.FoxIsHit();
         }
     }
