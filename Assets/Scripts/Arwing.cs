@@ -23,9 +23,12 @@ public class Arwing : MonoBehaviour
     private bool dying = false;
     private bool smoke = false;
     Rigidbody rb;
+    AudioSource LaserSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        LaserSound = GetComponent<AudioSource>();
         FoxHPText.text = "fox hp: " + lives;
         lives = 1;
         GameObject camShakeObject = GameObject.FindWithTag("MainCamera");
@@ -41,7 +44,6 @@ public class Arwing : MonoBehaviour
         FoxHPText.text = "fox hp: " + lives;
         if(lives <= 0) {
             dying = true;
-            // Destroy(gameObject);
         }
         if(!dying) {
             float horizontal = Input.GetAxis("Horizontal");
@@ -60,10 +62,13 @@ public class Arwing : MonoBehaviour
                 next_fire = Time.time + fire_rate;
                 if(lives == 1) {
                     Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+                    LaserSound.Play();
                 } else if(lives == 2) {
                     Instantiate(shotlvl2, shotSpawn.position, shotSpawn.rotation);
+                    LaserSound.Play();
                 } else if(lives == 3) {
                     Instantiate(shotlvl3, shotSpawn.position, shotSpawn.rotation);
+                    LaserSound.Play();
                 }
             }
         } else if(dying) {

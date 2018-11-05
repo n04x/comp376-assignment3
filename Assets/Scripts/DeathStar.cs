@@ -18,10 +18,14 @@ public class DeathStar : MonoBehaviour
     float timer;
     bool invincible = true;
     bool isDestroyed = false;
+    AudioSource LaserSound;
+    AudioSource ExplosionSound;
 
     public GameObject EnemyBolt;
+    public GameObject DeathStarExplosion;
     public Transform ShotSpawn;
     void Start() {
+        LaserSound = GetComponent<AudioSource>();
         GameObject deathStarHPObject = GameObject.FindWithTag("DeathStarHP");
         if(deathStarHPObject != null) {
             DeathStarHP = deathStarHPObject.GetComponent<DeathStarHPController>();
@@ -67,7 +71,6 @@ public class DeathStar : MonoBehaviour
         }
     }
     void OnTriggerEnter(Collider other) {
-        // Debug.Log(other);
         if(other.tag == "Boundary" || other.tag == "EnemyBolt") {
             return;
         }
@@ -77,19 +80,21 @@ public class DeathStar : MonoBehaviour
             DeathStarHP.DamageTaken(1);
         } else {
             shieldLevel--;
-            // this.GetComponent<SpriteRenderer>().sprite = DamagedDeathStar;
         }
     }
     void Shoot() {
         Instantiate(EnemyBolt, ShotSpawn.position, ShotSpawn.rotation);
+        LaserSound.Play();
     }
 
     void CrashingDown() {
         int hp = DeathStarHP.GetHP();
         if(hp == 0) {
+            Instantiate(DeathStarExplosion, transform.position, Quaternion.identity);
             invincible = true;
             isDestroyed = true;
             deathStarSpriteRenderer.sprite = DamagedDeathStar;
+
         }
     }   
 }

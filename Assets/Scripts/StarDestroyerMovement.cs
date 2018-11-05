@@ -17,8 +17,10 @@ public class StarDestroyerMovement : MonoBehaviour
     public GameObject EnemyBolt;
     public Transform ShotSpawn;
     public Transform ShotSpawn2;
+    AudioSource LaserSound;
 
     void Start() {
+        LaserSound = GetComponent<AudioSource>();
         moving = true;
         fireRate = 2.0f;
     }
@@ -59,5 +61,6 @@ public class StarDestroyerMovement : MonoBehaviour
         // this.GetComponent<SpriteRenderer>().sprite = StarDestroyerFire;
         Instantiate(EnemyBolt, ShotSpawn.position, ShotSpawn.rotation);
         Instantiate(EnemyBolt, ShotSpawn2.position, ShotSpawn2.rotation);
+        LaserSound.Play();
     }
 }
