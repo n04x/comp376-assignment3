@@ -21,4 +21,8 @@ public class DeathStarHPController : MonoBehaviour
     public void UpdateHealth() {
         HPText.text = "boss hp: " + HPvalue;
     }
+
+    public int GetHP() {
+        return HPvalue;
+    }
 }

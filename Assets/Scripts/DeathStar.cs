@@ -17,6 +17,8 @@ public class DeathStar : MonoBehaviour
     float shieldUpTimer = 5.0f;
     float timer;
     bool invincible = true;
+    bool isDestroyed = false;
+
     public GameObject EnemyBolt;
     public Transform ShotSpawn;
     void Start() {
@@ -36,11 +38,14 @@ public class DeathStar : MonoBehaviour
         } else {
             invincible = false;
         }
-        Shield();
-        if(!invincible && Time.time > nextFire) {
-            nextFire = Time.time + fireRate;
-            Shoot();
-        }
+        CrashingDown();
+        if(!isDestroyed) {
+            Shield();
+            if(!invincible && Time.time > nextFire) {
+                nextFire = Time.time + fireRate;
+                Shoot();
+            }
+        }         
     }
     void Shield() {
             if(shieldLevel == 2) {
@@ -77,5 +82,14 @@ public class DeathStar : MonoBehaviour
     }
     void Shoot() {
         Instantiate(EnemyBolt, ShotSpawn.position, ShotSpawn.rotation);
+    }
+
+    void CrashingDown() {
+        int hp = DeathStarHP.GetHP();
+        if(hp == 0) {
+            invincible = true;
+            isDestroyed = true;
+            deathStarSpriteRenderer.sprite = DamagedDeathStar;
+        }
     }   
 }

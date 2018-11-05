@@ -27,6 +27,7 @@ public class GameController : MonoBehaviour
     // Text management for the game.
     public Text ScoreBoard;
     public Text GameOverText;
+    public Text RestartText;
     private int score;
     private int tie_destroyed_counter;
     private int star_destroyer_counter;
@@ -42,6 +43,7 @@ public class GameController : MonoBehaviour
         restart = false;
         gameOver = false;
         GameOverText.text = "";
+        RestartText.text = "";
         GameObject deathStarHPObject = GameObject.FindWithTag("DeathStarHP");
         if(deathStarHPObject != null) {
             DeathStarHP = deathStarHPObject.GetComponent<DeathStarHPController>();
@@ -87,7 +89,7 @@ public class GameController : MonoBehaviour
             Invoke("SpawnDeathStar", 30);   
         }
         if(gameOver) {
-            GameOverText.text = "press 'r' for restart";
+            RestartText.text = "press 'r' for restart";
             restart = true;
         }
     }

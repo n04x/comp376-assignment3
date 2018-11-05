@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 7951257516357064884}
   - component: {fileID: 8697952412861103167}
   - component: {fileID: 7946858822152434112}
+  - component: {fileID: 7446789705550363935}
   - component: {fileID: 7946858822152434115}
   m_Layer: 0
   m_Name: EnemyBolt
@@ -140,6 +141,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7446789705550363935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7948551646229962258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8204e56bcbf8007aa898d69bcdbff387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arwingSmoke: {fileID: 4598306611387698098, guid: 7cb4c0e7f04cda2ef9269d656c67c38f, type: 3}
 --- !u!65 &7946858822152434115
 BoxCollider:
   m_ObjectHideFlags: 0
