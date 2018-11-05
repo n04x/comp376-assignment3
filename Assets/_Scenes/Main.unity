@@ -938,7 +938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1532097941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -965,7 +965,7 @@ MonoBehaviour:
   R2D2SpawnPosition: {x: 0, y: 12, z: -30}
   ScoreBoard: {fileID: 2118428427}
   GameOverText: {fileID: 1713545743}
-  RestartText: {fileID: 0}
+  RestartText: {fileID: 151307883}
 --- !u!4 &1532097942
 Transform:
   m_ObjectHideFlags: 0
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   shotSpawn: {fileID: 285951962}
   FoxHPText: {fileID: 1250765542}
   explosion: {fileID: 3742369439102127867, guid: b30c809497fe300f0998d66bdc0c4653, type: 3}
-  SmokeHit: {fileID: 0}
+  SmokeHit: {fileID: 4598306611387698098, guid: 7cb4c0e7f04cda2ef9269d656c67c38f, type: 3}
   fire_rate: 0.5
 --- !u!54 &1569768036
 Rigidbody:
@@ -1420,8 +1420,8 @@ MonoBehaviour:
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "game over\x13"
 --- !u!222 &1713545744

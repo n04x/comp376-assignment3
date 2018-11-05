@@ -18,6 +18,7 @@ public class DeathStar : MonoBehaviour
     float timer;
     bool invincible = true;
     bool isDestroyed = false;
+    bool explosion = false;
     AudioSource LaserSound;
     AudioSource ExplosionSound;
 
@@ -90,7 +91,10 @@ public class DeathStar : MonoBehaviour
     void CrashingDown() {
         int hp = DeathStarHP.GetHP();
         if(hp == 0) {
-            Instantiate(DeathStarExplosion, transform.position, Quaternion.identity);
+            if(!explosion) {
+                Instantiate(DeathStarExplosion, transform.position, Quaternion.identity);
+                explosion = true;
+            }
             invincible = true;
             isDestroyed = true;
             deathStarSpriteRenderer.sprite = DamagedDeathStar;
