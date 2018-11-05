@@ -13,7 +13,7 @@ public class R2D2PowerUp : MonoBehaviour
         arwing = arwing_object.GetComponent<Arwing>();
     }
     private void Update() {
-        transform.Translate(-Vector3.forward * speed);
+        // transform.Translate(-Vector3.up * speed);
     }
 
     private void OnTriggerEnter(Collider other) {

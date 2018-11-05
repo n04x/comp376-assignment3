@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public GameObject StarDestroyerObject2;
     public GameObject StarDestroyerObject3;
     public GameObject DeathStarObject;
+    public GameObject R2D2PowerUp;
     private DeathStarHPController DeathStarHP;
    
 
@@ -21,6 +22,7 @@ public class GameController : MonoBehaviour
     public Vector3 StarDestroyerSpawnPosition2;
     public Vector3 StarDestroyerSpawnPosition3;
     public Vector3 DeathStartSpawnPosition;
+    public Vector3 R2D2SpawnPosition;
 
     // Text management for the game.
     public Text ScoreBoard;
@@ -49,7 +51,6 @@ public class GameController : MonoBehaviour
         tie_destroyed_counter = 0;
         star_destroyer_counter = 1;
         UpdateScore();
-        // StartCoroutine(SpawnTIEFighter());
     }
 
     // Update is called once per frame
@@ -60,32 +61,39 @@ public class GameController : MonoBehaviour
                 SceneManager.LoadScene(0);
             }
         }
-        if(tie_destroyed_counter > 7 && callTIEFighter) {
-            Invoke("SpawnTIEFighter", 2);
+        if(tie_destroyed_counter >= 7 && callTIEFighter) {
+            Invoke("SpawnPowerUp", 1);
+            Invoke("SpawnTIEFighter", 4);
             callTIEFighter = false;
         }
-        if(tie_destroyed_counter > 14) {
+        if(tie_destroyed_counter >= 14) {
+            // Invoke("SpawnPowerUp", 0);
             callStarDestroyer = true;
         }
         if(callStarDestroyer && star_destroyer_counter == 1) {
-            Invoke("SpawnStarDestroyer1", 2);
+            Invoke("SpawnPowerUp", 1);
+            Invoke("SpawnStarDestroyer1", 3);
             star_destroyer_counter++;
         } else if(callStarDestroyer && star_destroyer_counter == 2) {
-            Invoke("SpawnStarDestroyer2", 8);
+            Invoke("SpawnStarDestroyer2", 9);
             star_destroyer_counter++;
         } else if(callStarDestroyer && star_destroyer_counter == 3) {
-            Invoke("SpawnStarDestroyer3", 16);
+            Invoke("SpawnStarDestroyer3", 17);
             star_destroyer_counter++;
             callStarDestroyer = false;
         }
         if(star_destroyer_counter >= 3 && callDeathStar) {
             callDeathStar = false;
-            Invoke("SpawnDeathStar", 25);   
+            Invoke("SpawnDeathStar", 30);   
         }
         if(gameOver) {
             GameOverText.text = "press 'r' for restart";
             restart = true;
         }
+    }
+    void SpawnPowerUp() {
+        Quaternion spawnRotation = Quaternion.identity;
+        Instantiate(R2D2PowerUp, R2D2SpawnPosition, spawnRotation);
     }
     void SpawnTIEFighter() {
         Quaternion spawnRotation = Quaternion.identity;
