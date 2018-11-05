@@ -69,7 +69,6 @@ public class GameController : MonoBehaviour
             callTIEFighter = false;
         }
         if(tie_destroyed_counter >= 14) {
-            // Invoke("SpawnPowerUp", 0);
             callStarDestroyer = true;
         }
         if(callStarDestroyer && star_destroyer_counter == 1) {
