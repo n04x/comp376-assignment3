@@ -10,7 +10,7 @@ public class DeathStarHPController : MonoBehaviour
 
     private void Start() {
         HPText.text = "";    
-        HPvalue = 15;
+        HPvalue = 30;
     }
 
     public void DamageTaken(int dmg) {

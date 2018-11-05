@@ -87,6 +87,9 @@ public class GameController : MonoBehaviour
             callDeathStar = false;
             Invoke("SpawnDeathStar", 30);   
         }
+        if(DeathStarHP.GetHP() <= 0) {
+            gameOver = true;
+        }
         if(gameOver) {
             RestartText.text = "press 'r' for restart";
             restart = true;

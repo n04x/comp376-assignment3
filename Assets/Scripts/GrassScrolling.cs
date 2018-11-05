@@ -6,7 +6,6 @@ public class GrassScrolling : MonoBehaviour
 {
     public Renderer rend;
     public float speed = 0.5f;
-    private bool BossLevel = false;
     float timer;
     // Start is called before the first frame update
     void Start()

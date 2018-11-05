@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3117844380831416505}
   - component: {fileID: 299277689454191167}
   - component: {fileID: 8151876412720017172}
+  - component: {fileID: 2913572051342425061}
   m_Layer: 0
   m_Name: VFX (1)
   m_TagString: Untagged
@@ -92,6 +93,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 90
   direction: -1
+--- !u!65 &2913572051342425061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3859311111137874928}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 6.1232336e-17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5625833733840740587
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,6 +118,7 @@ GameObject:
   - component: {fileID: 3695728519649806584}
   - component: {fileID: 3799883489702443734}
   - component: {fileID: 1199494917401803445}
+  - component: {fileID: 7211372477943239422}
   m_Layer: 0
   m_Name: VFX (2)
   m_TagString: Untagged
@@ -184,6 +199,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 90
   direction: 1
+--- !u!65 &7211372477943239422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5625833733840740587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 6.1232336e-17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8747035559968847986
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,6 +223,7 @@ GameObject:
   - component: {fileID: 8750822293343761758}
   - component: {fileID: 8725413492760071416}
   - component: {fileID: 8733032202290676360}
+  - component: {fileID: 6665330741325773928}
   m_Layer: 0
   m_Name: VFX
   m_TagString: Untagged
@@ -261,6 +290,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6665330741325773928
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8747035559968847986}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 6.1232336e-17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8747725060736061072
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +317,7 @@ GameObject:
   - component: {fileID: 8746041041456832833}
   m_Layer: 0
   m_Name: BoltLvl3
-  m_TagString: Bolt
+  m_TagString: Boundary
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

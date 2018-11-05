@@ -15,7 +15,7 @@ public class Arwing : MonoBehaviour
     GameObject explosion_temp;
     public GameObject SmokeHit;
     GameObject SmokeHit_temp;
-    private float HORIZONTAL_LIMIT = 25.0f;
+    private float HORIZONTAL_LIMIT = 14.0f;
     private float VERTICAL_LIMIT = 7.5f;
     public float fire_rate;
     private float next_fire;
@@ -66,7 +66,7 @@ public class Arwing : MonoBehaviour
                 } else if(lives == 2) {
                     Instantiate(shotlvl2, shotSpawn.position, shotSpawn.rotation);
                     LaserSound.Play();
-                } else if(lives == 3) {
+                } else if(lives >= 3) {
                     Instantiate(shotlvl3, shotSpawn.position, shotSpawn.rotation);
                     LaserSound.Play();
                 }
